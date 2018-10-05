@@ -1,4 +1,4 @@
-    public class UDPServerTabPage : TabPage
+   public class UDPServerTabPage : TabPage
     {
         public static string[] gSendType = { "Random", "Packet", "Fixed" };
         private static int gServerTabPage = 1;
@@ -6,6 +6,7 @@
         private int _Width;
         private int _Height;
 
+        #region Component
         private SplitContainer _FirstSplit;
         private SplitContainer _SecondSplit;
         private TableLayoutPanel _FirstPnl;
@@ -27,6 +28,7 @@
         private TextBox _ClientPortTxt;
 
         private ComboBox _SendTypeCbo;
+        #endregion
 
         public UDPServerTabPage(Control parent) 
         {
@@ -261,7 +263,6 @@
 
             return 0;
         }
-
 
         int AddClientComponent(Control parent, int rowNum)
         {
